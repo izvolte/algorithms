@@ -4,13 +4,12 @@ function binarySearch<T>(list: T[], item: T): number | null {
 
     while (low <= high) {
         const mid = Math.floor((low + high) / 2);
-        const guess = list[mid];
 
-        if (guess === item) {
+        if (list[mid] === item) {
             return mid;
         }
 
-        if (guess > item) {
+        if (list[mid] > item) {
             high = mid - 1;
         } else {
             low = mid + 1;
@@ -20,5 +19,9 @@ function binarySearch<T>(list: T[], item: T): number | null {
     return null;
 }
 
-binarySearch([1, 3, 5, 7, 9], 5); // Output: 2
-binarySearch([1, 3, 5, 7, 9], 10); // Output: null
+console.log(binarySearch([1, 3, 5, 7, 9], 5));
+console.log(binarySearch([1, 3, 5, 7, 9], 10));
+
+const array50 = Array.from({ length: 50 }, (_item: unknown, z: number) => z + 1)
+
+console.log(binarySearch(array50, 50));

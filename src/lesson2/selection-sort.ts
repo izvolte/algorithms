@@ -1,4 +1,3 @@
-
 function findSmallest(arr: number[]): number {
     let smallest = arr[0];
     let smallestIndex = 0;

@@ -28,4 +28,4 @@ console.log(selectionSort([5, 3, 6, 2, 10]));
 // 2. какая пространнственная сложность?
 // 3. можно ли чуть упростить временную сложность не изменяю общей сути?*
 
-// https://leetcode.com/problems/sort-an-array/description/ - попробуй написать по памяти
+// https://leetcode.com/problems/sort-an-array/description/ - попробуй написать по памяти*

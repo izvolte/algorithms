@@ -1,11 +1,13 @@
 class ListNode {
     val: number
     next: ListNode | null
+
     constructor(val?: number, next?: ListNode | null) {
-        this.val = (val===undefined ? 0 : val)
-        this.next = (next===undefined ? null : next)
+        this.val = (val === undefined ? 0 : val)
+        this.next = (next === undefined ? null : next)
     }
 }
+
 
 const node5 = new ListNode(10, null); // последний узел
 const node4 = new ListNode(2, node5);

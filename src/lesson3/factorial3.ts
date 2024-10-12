@@ -13,3 +13,6 @@ function factorial3(n: number, accumulator: number = 1): number {
 console.log(factorial3(5)); // Вывод: 120
 
 // → factorial3() ??
+
+
+//https://leetcode.com/problems/climbing-stairs/description/

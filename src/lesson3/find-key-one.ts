@@ -12,7 +12,7 @@ interface Box {
     isBox(): this is Box;
 }
 
-function _lookForKey(mainBox: Box): void {
+function _lookForKey(mainBox: Box): boolean {
     let pile: Box[] = mainBox.makeAPileToLookThrough();
 
     while (pile.length > 0) {
@@ -24,9 +24,13 @@ function _lookForKey(mainBox: Box): void {
                     pile.push(item);
                 } else if (item.isKey()) {
                     console.log("Found the key!");
-                    return;
+                    return true;
                 }
             }
         }
     }
+
+    return false
 }
+
+// O(n)

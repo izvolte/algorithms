@@ -11,13 +11,15 @@ interface Box {
     isBox(): this is Box;
 }
 
-function _lookForKey(box: Box): void {
+function _lookForKey2(box: Box): void {
     for (let item of box) {
         if (item.isBox()) {
-            _lookForKey(item);
+            _lookForKey2(item);
         } else if (item.isKey()) {
             console.log("Found the key!");
             return;
         }
     }
 }
+
+// O(n)

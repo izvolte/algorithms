@@ -5,7 +5,7 @@ function factorial(n: number): number {
     return n * factorial(n - 1);  // рекурсивный вызов
 }
 
-console.log(factorial(5)); // Вывод: 120
+console.log(factorial(10000)); // Вывод: 120
 
 
 // → 5 * factorial(4)

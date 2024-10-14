@@ -1,18 +1,17 @@
-function factorial3(n: number, accumulator: number = 1): number {
-    if (n <= 1) return n;
+function factorialIterative(n: number): bigint {
+    let result = 1n;
 
-    //??
 
-    for (let i = 2; i <= n; i++) {
-        // ??
+    for (let i = 2n; i <= n; i++) {
+        result *= i;
     }
 
-    return 120// ??
+    return result;
 }
 
-console.log(factorial3(5)); // Вывод: 120
+const start = performance.now();
 
-// → factorial3() ??
+factorialIterative(10000)
 
-
-//https://leetcode.com/problems/climbing-stairs/description/
+const duration = Math.round(performance.now() - start) / 1000
+console.log(`Exec time factorial(${10000}): ${duration} s, result`);

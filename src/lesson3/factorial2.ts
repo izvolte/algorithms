@@ -5,7 +5,7 @@ function factorial2(n: number, accumulator: number = 1): number {
     return factorial2(n - 1, accumulator * n); // Хвостовой вызов
 }
 
-console.log(factorial2(10000)); // Вывод: 120
+console.log(factorial2(5)); // 120
 
 // → factorial2(5)
 // → factorial2(4, 5)

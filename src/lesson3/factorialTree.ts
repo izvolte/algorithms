@@ -1,4 +1,4 @@
-function factorialMemo(n: number) {
+function factorialTree(n: number) {
     function calcTree(l: bigint, r: bigint): bigint {
         if (l > r) return 1n;
         if (l == r) return l;
@@ -12,14 +12,14 @@ function factorialMemo(n: number) {
     if (n == 1 || n == 2) return n;
 
 
-    const result = String(calcTree(2n, BigInt(n)));;
+    const result = String(calcTree(2n, BigInt(n)));
 }
 
 
 
 const start3 = performance.now();
 
-factorialMemo(10000)
+factorialTree(10000)
 
 const duration3 = Math.round(performance.now() - start3) / 1000
 

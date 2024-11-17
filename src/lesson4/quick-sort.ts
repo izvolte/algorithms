@@ -1,3 +1,5 @@
+import * as fs from "fs";
+
 function quickSort<T>(array: T[]): T[] {
     if (array.length <= 1) {
         return array;
@@ -21,4 +23,15 @@ function quickSort<T>(array: T[]): T[] {
     return [...quickSort(left), ...equal, ...quickSort(right)];
 }
 
-console.log(quickSort([38, 27, 43, 3, 9, 82, 10]))
+
+const filePaths = ["./small.json", "./medium.json", "./large.json"];
+
+filePaths.forEach((filePath) => {
+    const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as number[];
+
+    const start = performance.now();
+    const sortedData = quickSort(data); // Perform merge sort
+    const duration = (performance.now() - start) / 1000;
+
+    console.log(`Execution time for ${filePath} length ${data.length}: ${duration.toFixed(3)} seconds`);
+});

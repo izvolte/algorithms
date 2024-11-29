@@ -1,4 +1,4 @@
-class Deque<T> {
+export class Deque<T> {
     private items: { [key: number]: T } = {};
     private front: number = 0;
     private rear: number = 0;

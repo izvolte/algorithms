@@ -27,12 +27,13 @@ export class Deque<T> {
     }
 }
 
-const deque = new Deque<number>();
+// const deque = new Deque<number>();
 
-deque.add(1);  // Дек: [1]
-deque.add(2);   // Дек: [1, 2]
-console.log(deque.size()); // 2
-
-console.log(deque.get()); // 1
-console.log(deque.get()); // 2
-console.log(deque.size()); // 0
+// deque.add(1);  // [1]
+// deque.add(2);   // [1, 2]
+// deque.add(3);   // [1, 2, 3]
+// console.log("size:" + deque.size()); // 2
+//
+// console.log(deque.get()); // 1
+// console.log(deque.get()); // 2
+// console.log("size:" + deque.size()); // 0

@@ -1,6 +1,6 @@
 import * as fs from "fs";
 
-function quickSort<T>(array: T[]): T[] {
+export function quickSort<T>(array: T[]): T[] {
     if (array.length <= 1) {
         return array;
     }
@@ -24,14 +24,14 @@ function quickSort<T>(array: T[]): T[] {
 }
 
 
-const filePaths = ["./small.json", "./medium.json", "./large.json"];
-
-filePaths.forEach((filePath) => {
-    const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as number[];
-
-    const start = performance.now();
-    const sortedData = quickSort(data); // Perform merge sort
-    const duration = (performance.now() - start) / 1000;
-
-    console.log(`Execution time for ${filePath} length ${data.length}: ${duration.toFixed(3)} seconds`);
-});
+// const filePaths = ["./small.json", "./medium.json", "./large.json"];
+//
+// filePaths.forEach((filePath) => {
+//     const data = JSON.parse(fs.readFileSync(filePath, "utf-8")) as number[];
+//
+//     const start = performance.now();
+//     const sortedData = quickSort(data); // Perform merge sort
+//     const duration = (performance.now() - start) / 1000;
+//
+//     console.log(`Execution time for ${filePath} length ${data.length}: ${duration.toFixed(3)} seconds`);
+// });

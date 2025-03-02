@@ -11,7 +11,7 @@ interface WorkerData {
 // «Параллельная» быстрая сортировка: при достаточной глубине порождаем новых воркеров
 async function parallelQuickSort(arr: number[], maxDepth: number): Promise<number[]> {
     if (arr.length < 2) return arr;
-    if (maxDepth <= 0) {
+    if (maxDepth <= 1) {
         // Переходим на обычный квик-сорт без параллелизма
         return quickSort(arr);
     }
